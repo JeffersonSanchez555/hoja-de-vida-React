@@ -109,16 +109,3 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-/* Forzar texto negro y fondo blanco en los elementos de formulario */
-input,
-textarea,
-select {
-  color: #000000 !important;
-  background-color: #8cd5f1 !important;
-}
-
-/* Cambiar el color del texto del placeholder (texto de ayuda) */
-input::placeholder,
-textarea::placeholder {
-  color: #666666 !important;
-}
