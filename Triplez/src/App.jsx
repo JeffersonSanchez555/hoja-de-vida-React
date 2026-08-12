@@ -11,7 +11,7 @@ function App() {
   const [paso, setPaso] = useState(1);
   const [datos, setDatos] = useState({});
   const [academico, setAcademico] = useState({});
-  const [experiencia, setExperiencia] = useState({});
+  const [experiencia, setExperiencia] = useState([]);
 
   return (
     <div className="contenedor">
