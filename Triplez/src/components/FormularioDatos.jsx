@@ -17,7 +17,16 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
           <input
             type="file"
             accept="image/*"
-            onChange={(e) => actualizar("foto", e.target.files?.[0]?.name || "")}
+            onChange={(e) => {
+              const archivo = e.target.files?.[0];
+              if (archivo) {
+                const lector = new FileReader();
+                lector.onloadend = () => actualizar("foto", lector.result);
+                lector.readAsDataURL(archivo);
+              } else {
+                actualizar("foto", "");
+              }
+            }}
           />
         </div>
         <div className="grupo">
